@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">HangoutNotifications</string>
+    <string name="hello_world">Hello world!</string>
+
+
+    <!-- For the menus -->
+    <string name="action_settings">Settings</string>
+    <string name="action_add">Add Contact</string>
+
+</resources>

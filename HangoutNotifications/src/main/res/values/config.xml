@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <integer name="animation_duration_long">300</integer>
+
+    <fraction name="animation_position_positive">100%p</fraction>
+    <fraction name="animation_position_negative">-100%p</fraction>
+
+</resources>
