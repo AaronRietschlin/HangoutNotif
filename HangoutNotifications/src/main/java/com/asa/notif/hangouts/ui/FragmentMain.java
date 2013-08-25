@@ -1,9 +1,16 @@
 package com.asa.notif.hangouts.ui;
 
+import android.app.Notification;
+import android.app.NotificationManager;
+import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
+import android.support.v4.app.NotificationCompat;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -16,6 +23,7 @@ import android.widget.Button;
 import com.asa.notif.hangouts.AppData;
 import com.asa.notif.hangouts.R;
 import com.asa.notif.hangouts.ui.base.AsaBaseFragment;
+import com.asa.notif.hangouts.utils.LogUtils;
 
 /**
  * Created by Aaron on 8/23/13.
@@ -57,6 +65,13 @@ public class FragmentMain extends AsaBaseFragment implements View.OnClickListene
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
         super.onCreateOptionsMenu(menu, inflater);
         inflater.inflate(R.menu.main, menu);
+
+    }
+
+    @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+
     }
 
     @Override
@@ -72,6 +87,7 @@ public class FragmentMain extends AsaBaseFragment implements View.OnClickListene
         if(data != null){
             Bundle extras = data.getExtras();
             Uri uri = data.getParcelableExtra(RingtoneManager.EXTRA_RINGTONE_PICKED_URI);
+            AppData.sUri = uri;
             Log.d(TAG, "Test");
         }
     }

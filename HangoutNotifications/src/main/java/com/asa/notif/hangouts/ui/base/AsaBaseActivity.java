@@ -18,7 +18,6 @@ public class AsaBaseActivity extends FragmentActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-
 		mFragmentManager = getSupportFragmentManager();
 	}
 
